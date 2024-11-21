@@ -200,16 +200,45 @@ export default function SkillDashboard() {
             </p>
 
             <div className="relative w-40 h-40">
-           <div className="absolute inset-0 rounded-full border-[24px] border-blue-500" />
-      
-             <div className="absolute inset-0 rounded-full border-[24px] border-blue-500 border-b-transparent"/>
-      
-             <div className="absolute inset-0 flex items-center justify-center">
-            <div className=" p-2 rounded-full">
-          <   Image className="text-destructive-foreground rounded-full" src={"/target.png"} width={50} height={50} alt='image'/>
-            </div>
-      </div>
-    </div>
+  <svg
+    className="absolute inset-0"
+    viewBox="0 0 100 100"
+    width="100%"
+    height="100%"
+  >
+    <circle
+      className="text-gray-200"
+      cx="50"
+      cy="50"
+      r="45"
+      fill="transparent"
+      stroke="currentColor"
+      strokeWidth="10"
+    />
+    <circle
+      className="text-blue-500"
+      cx="50"
+      cy="50"
+      r="45"
+      fill="transparent"
+      stroke="currentColor"
+      strokeWidth="10"
+      strokeLinecap="round"
+      strokeDasharray="282.6" // Circumference = 2 * π * r (r=45)
+      strokeDashoffset={282.6 - (282.6 * score) / 15} // Adjust offset based on score
+    />
+  </svg>
+  <div className="absolute inset-0 flex items-center justify-center">
+    <Image
+      className="text-destructive-foreground rounded-full"
+      src={"/target.png"}
+      width={50}
+      height={50}
+      alt="image"
+    />
+  </div>
+</div>
+
           </CardContent>
         </Card>
       </div>
