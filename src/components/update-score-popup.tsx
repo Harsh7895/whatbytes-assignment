@@ -30,7 +30,7 @@ export default function UpdateScore({ rank, percentile, score, onClose, onSave }
         <h2 className="text-xl font-semibold mb-6">Update Scores</h2>
         <div className="space-y-4">
           {/* Update Rank */}
-          <div className='flex justify-between items-center'>
+          <div className='flex justify-between items-center md:flex-row flex-col'>
             <Label htmlFor="rank" className="flex items-center gap-2 mb-2 flex-shrink-0">
               <div className="flex items-center justify-center w-6 h-6 rounded-full bg-blue-800 text-white text-primary text-sm">1</div>
               Update your <span className='font-bold text-black'>Rank</span>
