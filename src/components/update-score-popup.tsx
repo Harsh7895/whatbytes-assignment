@@ -44,7 +44,7 @@ export default function UpdateScore({ rank, percentile, score, onClose, onSave }
           </div>
 
           {/* Update Percentile */}
-          <div className='flex justify-between items-center'>
+          <div className='flex justify-between items-center md:flex-row flex-col'>
             <Label htmlFor="percentile" className="flex items-center gap-2 mb-2 flex-shrink-0">
               <div className="flex items-center justify-center w-6 h-6 rounded-full bg-blue-800 text-white text-sm">2</div>
               Update your <span className='font-bold text-black'>Percentile</span>
@@ -58,7 +58,7 @@ export default function UpdateScore({ rank, percentile, score, onClose, onSave }
           </div>
 
           {/* Update Current Score */}
-          <div className='flex justify-between items-center'>
+          <div className='flex justify-between items-center md:flex-row flex-col'>
             <Label htmlFor="score" className="flex items-center gap-2 mb-2 flex-shrink-0">
               <div className="flex items-center justify-center w-6 h-6 rounded-full bg-blue-800 text-white text-sm">3</div>
               Update your <span className='text-black font-bold'>Current Score (out of 15)</span>
