@@ -17,7 +17,7 @@ export default function SkillDashboard() {
   const [rank, setRank] = React.useState(4);
   const [percentile, setPercentile] = React.useState(90);
   const [score, setScore] = React.useState(12);
-  const [date , setDate] = React.useState("5 June 2021")
+  const [date , setDate] = React.useState("20 November 2024")
   let data = null;
 
   
