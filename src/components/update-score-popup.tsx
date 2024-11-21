@@ -67,7 +67,7 @@ export default function UpdateScore({ rank, percentile, score, onClose, onSave }
               id="score"
               value={updatedScore}
               onChange={(e) => setUpdatedScore(e.target.value)}
-              className="w-[30%] flex-shrink border-blue-500"
+              className="w-[30%] flex-shrink border-blue-500 ml-2 md:ml-0"
             />
           </div>
         </div>
