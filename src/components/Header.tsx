@@ -32,7 +32,7 @@ const Header = () => {
 
         {/* Hamburger Icon */}
         <GiHamburgerMenu
-          className="md:hidden block cursor-pointer"
+          className="md:hidden block cursor-pointer mr-2"
           size={24}
           onClick={toggleSidebar}
         />

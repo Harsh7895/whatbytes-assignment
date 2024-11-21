@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -10,6 +10,14 @@ export default function UpdateScore({ rank, percentile, score, onClose, onSave }
   const [updatedRank, setUpdatedRank] = useState(rank);
   const [updatedPercentile, setUpdatedPercentile] = useState(percentile);
   const [updatedScore, setUpdatedScore] = useState(score);
+
+    // Disable scroll when popup is open
+    useEffect(() => {
+      document.body.style.overflow = 'hidden'; 
+      return () => {
+        document.body.style.overflow = ''; 
+      };
+    }, []);
 
   const handleSave = () => {
     onSave(updatedRank, updatedPercentile, updatedScore); 

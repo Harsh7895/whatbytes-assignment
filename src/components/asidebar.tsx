@@ -2,9 +2,10 @@
 import { RiBarChartFill } from "react-icons/ri";
 import { TfiMedallAlt } from "react-icons/tfi";
 import { GrNote } from "react-icons/gr";
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Drawer, DrawerContent, DrawerTrigger, DrawerClose } from "./ui/drawer";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
   export const Asidebar = () => {
   return (
@@ -26,9 +27,15 @@ import Link from "next/link";
 }
 
 export const MobileSidebar = ({ closeSidebar }: { closeSidebar: () => void }) => {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'; 
+    return () => {
+      document.body.style.overflow = ''; 
+    };
+  }, []);
   return (
     <div className="fixed inset-0 z-50 bg-gray-900 bg-opacity-50 md:hidden">
-      <div className="w-64 bg-white h-full shadow-md">
+      <div className="w-64 bg-white h-full shadow-md ">
         {/* Sidebar Content */}
         <div className="p-6 flex flex-col gap-8">
           <Link
@@ -62,6 +69,15 @@ export const MobileSidebar = ({ closeSidebar }: { closeSidebar: () => void }) =>
         >
           ✕
         </button>
+        <Button
+          className="md:flex gap-1 px-4 h-[40px] text-base font-semibold hidden"
+          variant={"outline"}
+        >
+          <span className="w-[30px] h-[30px] rounded-full bg-gray-300 text-black flex justify-center items-center font-light">
+            H
+          </span>
+          Harsh Pawar
+        </Button>
       </div>
     </div>
   );
